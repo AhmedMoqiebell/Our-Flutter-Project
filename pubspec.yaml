@@ -61,6 +61,23 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/profile.png
+    - assets/images/apple.png
+    - assets/images/card.png
+    - assets/images/english.jpg
+    - assets/images/flutter.jpg
+    - assets/images/m_card.png
+    - assets/images/master_c.png
+    - assets/images/network.jpg
+    - assets/images/paypal.png
+    - assets/images/people.png
+    - assets/images/photo2.png
+    - assets/images/program.jpg
+    - assets/images/security.jpg
+    - assets/images/Untitled-1.png
+    - assets/images/UX_UI.jpg
+    - assets/images/wi.png
+    - assets/images/wifi (2).png
+    - assets/images/WiFi.png
     - assets/icons/play.svg
     - assets/icons/home-2.svg
     - assets/icons/frame.svg
