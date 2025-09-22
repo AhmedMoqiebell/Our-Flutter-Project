@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _currentIndex = 0; // التبويب الافتراضي Chats
+  int _currentIndex = 0; 
 
   final List<Widget> _pages = [
     HomePage(),

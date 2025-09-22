@@ -6,7 +6,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFBEAEA),
+      backgroundColor: const Color(0xFFFBF3F2),
       body: Stack(
         children: [
           // ===== محتوى الصفحة القابل للتمرير =====
@@ -61,7 +61,7 @@ class ProfilePage extends StatelessWidget {
                 const _OptionTile(icon: Icons.dark_mode, title: 'Dark Mode', hasSwitch: true),
                 const _OptionTile(icon: Icons.payment, title: 'Payment Details'),
                 const _OptionTile(icon: Icons.notifications, title: 'Notifications'),
-                const _OptionTile(icon: Icons.rate_review, title: 'Rate & Review'),
+                const _OptionTile(icon: Icons.star_border, title: 'Rate & Review'),
                 const _OptionTile(icon: Icons.help_outline, title: 'Help'),
                 const SizedBox(height: 40),
               ],
@@ -70,7 +70,7 @@ class ProfilePage extends StatelessWidget {
 
           // ===== AppBar متدرج =====
           Container(
-            height: 180,
+            height: 150,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment(-0.07, -0.06),
@@ -94,7 +94,7 @@ class ProfilePage extends StatelessWidget {
 
           // ===== صورة البروفايل وسط الـ AppBar والـ body =====
           Positioned(
-            top: 110,
+            top: 120,
             left: MediaQuery.of(context).size.width / 2 - 50,
             child: CircleAvatar(
               radius: 50,
@@ -153,16 +153,16 @@ class _OptionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, color: Colors.black), // أيقونات باللون الأسود
+      leading: Icon(icon, color: Color(0xFFD44035),), // أيقونات باللون الأسود
       title: Text(title,
           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
       trailing: hasSwitch
           ? Switch(
         value: false,
-        activeColor: const Color(0xFFD44035),
+        activeThumbColor: const Color(0xFFD44035),
         onChanged: (val) {},
       )
-          : const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.black54),
+          : const Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xFFD44035),),
       onTap: () {},
     );
   }

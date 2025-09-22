@@ -32,7 +32,7 @@ class ChatsPage extends StatelessWidget {
             child: Container(
               height: 55,
               decoration: BoxDecoration(
-                color: const Color(0xFFBF3F2),
+                color: const Color(0xFFFBF3F2),
                 borderRadius: BorderRadius.circular(27.5),
                 border: Border.all(color: Color(0xFFD44035), width: 1),
               ),
