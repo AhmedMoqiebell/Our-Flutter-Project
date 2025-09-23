@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'edit_profile_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -18,9 +19,10 @@ class ProfilePage extends StatelessWidget {
                 const Text(
                   'Ahmed',
                   style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
                 ),
                 const Text(
                   'amoqiebel736@gmail.com',
@@ -32,11 +34,21 @@ class ProfilePage extends StatelessWidget {
                     backgroundColor: const Color(0xFFD44035),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
-                    padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 8,
+                    ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const EditProfilePage(),
+                      ),
+                    );
+                  },
                   icon: const Icon(Icons.edit, size: 18),
                   label: const Text('edit profile'),
                 ),
@@ -58,10 +70,23 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 // ===== خيارات القائمة =====
-                const _OptionTile(icon: Icons.dark_mode, title: 'Dark Mode', hasSwitch: true),
-                const _OptionTile(icon: Icons.payment, title: 'Payment Details'),
-                const _OptionTile(icon: Icons.notifications, title: 'Notifications'),
-                const _OptionTile(icon: Icons.star_border, title: 'Rate & Review'),
+                const _OptionTile(
+                  icon: Icons.dark_mode,
+                  title: 'Dark Mode',
+                  hasSwitch: true,
+                ),
+                const _OptionTile(
+                  icon: Icons.payment,
+                  title: 'Payment Details',
+                ),
+                const _OptionTile(
+                  icon: Icons.notifications,
+                  title: 'Notifications',
+                ),
+                const _OptionTile(
+                  icon: Icons.star_border,
+                  title: 'Rate & Review',
+                ),
                 const _OptionTile(icon: Icons.help_outline, title: 'Help'),
                 const SizedBox(height: 40),
               ],
@@ -86,9 +111,10 @@ class ProfilePage extends StatelessWidget {
             child: const Text(
               'Profile',
               style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
           ),
 
@@ -131,8 +157,10 @@ class _StatBox extends StatelessWidget {
         children: [
           Icon(icon, color: Colors.white, size: 20),
           const SizedBox(height: 4),
-          Text(label,
-              style: const TextStyle(color: Colors.white, fontSize: 12)),
+          Text(
+            label,
+            style: const TextStyle(color: Colors.white, fontSize: 12),
+          ),
         ],
       ),
     );
@@ -153,16 +181,22 @@ class _OptionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(icon, color: Color(0xFFD44035),), // أيقونات باللون الأسود
-      title: Text(title,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+      leading: Icon(icon, color: Color(0xFFD44035)), // أيقونات باللون الأسود
+      title: Text(
+        title,
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+      ),
       trailing: hasSwitch
           ? Switch(
-        value: false,
-        activeThumbColor: const Color(0xFFD44035),
-        onChanged: (val) {},
-      )
-          : const Icon(Icons.arrow_forward_ios, size: 16, color: Color(0xFFD44035),),
+              value: false,
+              activeThumbColor: const Color(0xFFD44035),
+              onChanged: (val) {},
+            )
+          : const Icon(
+              Icons.arrow_forward_ios,
+              size: 16,
+              color: Color(0xFFD44035),
+            ),
       onTap: () {},
     );
   }
